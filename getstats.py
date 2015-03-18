@@ -29,3 +29,4 @@ print 'Biggest:', biggest
 print 'Mean: ', m
 print 'Std:  ', std(figures)
 print 'Popularity increase factor: ', biggest[1] / m
+print 'Number of standard deviations from the mean: ', (biggest[1] - m) / std(figures)
