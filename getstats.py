@@ -25,8 +25,10 @@ from numpy import std, mean
 figures = [x[1] for x in lis]
 
 m = mean(figures)
+total = sum(figures) + biggest[1]
 print 'Biggest:', biggest
 print 'Mean: ', m
 print 'Std:  ', std(figures)
 print 'Popularity increase factor: ', biggest[1] / m
 print 'Number of standard deviations from the mean: ', (biggest[1] - m) / std(figures)
+print 'Total visits over last 90 days: ', total
