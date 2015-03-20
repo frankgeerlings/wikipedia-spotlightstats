@@ -33,4 +33,10 @@ def stats(article):
 	print 'Number of standard deviations from the mean: ', (biggest[1] - m) / std(figures)
 	print 'Total visits over last 90 days: ', total
 
-stats('Vanguard_1')
+if __name__ == "__main__":
+	import sys
+
+	args = sys.argv[1:]
+	article = reduce(lambda x, y: x + ' ' + y, args, '')[1:].replace(' ', '_')
+	pprint(article)
+	stats(article)
